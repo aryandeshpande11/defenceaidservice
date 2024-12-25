@@ -6,37 +6,57 @@
     <meta name="description" content="Defense Aids and Services Portal with Job Opportunities, Government Schemes, and Latest Updates">
     <title>National Security Support and Services Hub</title>
     <style>
-        /* Basic Styles */
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
-        header, footer {
-            background-color: #333;
+        header {
+            position: relative;
+            background-image: url('images/header-bg.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
             color: white;
-            text-align: center;
-            padding: 20px;
+            text-shadow: 2px 2px 5px black;
+            padding: 50px 20px;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 1;
+        }
+        header h1, header img {
+            position: relative;
+            z-index: 2;
         }
         header h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
+            font-size: 3em;
+            margin: 20px 0;
         }
         nav {
             background-color: #444;
-            padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px 20px;
-            margin: 0 15px;
+            margin: 0 10px;
             font-size: 1.1em;
+            transition: background 0.3s, color 0.3s;
         }
         nav a:hover {
             background-color: #575757;
+            color: #ffd700; /* Gold hover effect */
         }
         section {
             padding: 40px 20px;
@@ -52,20 +72,18 @@
             text-shadow: 1px 1px 4px black;
         }
         a {
-            color: white; /* Normal state */
-            text-decoration: none; 
+            color: white; /* Default link color */
+            text-decoration: none;
         }
-
-        a:visited {
-            color: white; 
-        }
-
         a:hover {
-            color: red; 
+            color: red; /* Hover effect */
         }
-
-        a:active {
-            color: white; 
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -81,13 +99,13 @@
         <a href="#job-opportunities">Job Opportunities</a>
         <a href="#government-schemes">Government Schemes</a>
         <a href="#updates">Updates</a>
-        <a href="mailto:nationalservicehub2024@gmail.com">Contact Us</a> <!-- Contact Us mailto link -->
+        <a href="mailto:nationalservicehub2024@gmail.com">Contact Us</a>
     </nav>
 
     <!-- Job Opportunities Section -->
     <section id="job-opportunities">
         <h2>Job Opportunities</h2>
-        <div class="card" style="position: relative; height: 250px; background-image: url('images/careers.jpg'); background-size: cover; background-position: center;">
+        <div class="card" style="background-image: url('images/careers.jpg'); background-size: cover; background-position: center;">
             <h3>Employment</h3>
             <p>Explore the various job openings in the globe and start your career in selected fields.</p>
             <a href="https://dgrindia.gov.in/Content2/job-assistance/job-for-officers">Learn More</a>
@@ -95,8 +113,8 @@
     </section>
 
     <!-- Government Schemes Section -->
-    <section id="government-schemes" style="position: relative; height: auto; background-image: url('images/military.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 1px 1px 4px black; padding: 40px 20px;">
-        <h2 style="text-align: center;">Government Schemes</h2>
+    <section id="government-schemes" style="background-image: url('images/military.jpg'); background-size: cover; background-position: center; color: white; text-shadow: 1px 1px 4px black;">
+        <h2>Government Schemes</h2>
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
             <div class="card">
                 <h3>Sainik Schools Scheme</h3>
@@ -120,20 +138,20 @@
     <section id="updates">
         <h2>Latest Updates</h2>
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <div class="card" style="height: 200px; background-image: url('images/recruitment_process.jpg'); background-size: cover; background-position: center;">
+            <div class="card" style="background-image: url('images/recruitment_process.jpg'); background-size: cover; background-position: center;">
                 <h3>New Recruitment Process</h3>
                 <p>The government has announced a new recruitment process for all armed forces.</p>
                 <a href="https://joinindianarmy.nic.in/default.aspx">Read More</a>
             </div>
-            <div class="card" style="height: 200px; background-image: url('images/istockphoto.jpg'); background-size: cover; background-position: center;">
+            <div class="card" style="background-image: url('images/istockphoto.jpg'); background-size: cover; background-position: center;">
                 <h3>Defence Technology Advancements</h3>
                 <p>Explore the latest advancements in technology being adopted by the defense forces.</p>
                 <a href="https://thediplomat.com/2024/10/ai-and-indian-defense-enhancing-national-security-through-innovation/#:~:text=The%20Indian%20Army's%20research%20in,quantum%20communication%2C%20and%20quantum%20computing.&text=The%20applications%20of%20AI%20within%20the%20Indian%20military%20are%20diverse%20and%20evolving.">Read More</a>
             </div>
-            <div class="card" style="height: 200px; background-image: url('images/veterans.jpg'); background-size: cover; background-position: center;">
+            <div class="card" style="background-image: url('images/veterans.jpg'); background-size: cover; background-position: center;">
                 <h3>Veteran's Day Celebration</h3>
                 <p>Join us in celebrating the service and sacrifices of our veterans.</p>
-                <a href="https://www.desw.gov.in/en/gallery/armed-forces-veteran-day-%E0%A4%B8%E0%A4%B6%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE-%E0%A4%B5%E0%A4%AF%E0%A4%93%E0%A4%B5%E0%A5%83%E0%A4%A6%E0%A5%8D%E0%A4%A7-%E0%A4%A6%E0%A4%BF%E0%A4%B5%E0%A4%B8">Read More</a>
+                <a href="https://www.desw.gov.in/en/gallery/armed-forces-veteran-day-%E0%A4%B8%E0%A4%B6%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%B8%E0%A5%87%E0%A4%A8%E0%A4%BE-%E0%A4%B5%E0%A4%AF%E0%A5%8B%E0%A4%B5%E0%A5%83%E0%A4%A6%E0%A5%8D%E0%A4%A7-%E0%A4%A6%E0%A4%BF%E0%A4%B5%E0%A4%B8">Read More</a>
             </div>
         </div>
     </section>
